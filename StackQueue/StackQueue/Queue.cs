@@ -43,6 +43,25 @@ namespace StackQueue
             }
 
         }
+        internal void Dequeue(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("{0} remove into Queue", node.data);
+
+        }
     }
 }
 

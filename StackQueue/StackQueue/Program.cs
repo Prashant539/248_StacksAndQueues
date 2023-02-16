@@ -10,6 +10,7 @@ namespace StackQueue
             Console.WriteLine("2.Peek And Pop ");
             Console.WriteLine("Enter the option");
             Console.WriteLine("3.Queue ");
+            Console.WriteLine("4.DeQueue ");
             int num = Convert.ToInt32(Console.ReadLine());
             Stack stack = new Stack();
             switch (num)
@@ -35,6 +36,14 @@ namespace StackQueue
                     queue.Enqueue(30);
                     queue.Enqueue(70);
                     queue.Display();
+                    break;
+                case 4:
+                    Queue queue1 = new Queue();
+                    
+                    queue1.Dequeue(70);
+                    queue1.Dequeue(30);
+                    queue1.Dequeue(50);
+                   queue1.Display();
                     break;
                 default:
                     Console.WriteLine("Enter a valid option");
